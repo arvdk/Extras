@@ -1,0 +1,41 @@
+{
+    "version": "1.2.2",
+    "description": "WinUI 3-based toolbox for system diagnostics, benchmarking, and PC utilities",
+    "homepage": "https://github.com/luolangaga/tubatools",
+    "license": "GPL-3.0-or-later",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/luolangaga/tubatools/releases/download/v1.2.2/TubaWinUi3_Portable_1.2.2_x64.zip",
+            "hash": "8746b5dcb0f4c8213e8651370dc1c44ebc55681b8850d0141360296313257744"
+        },
+        "32bit": {
+            "url": "https://github.com/luolangaga/tubatools/releases/download/v1.2.2/TubaWinUi3_Portable_1.2.2_x86.zip",
+            "hash": "a3456d9ac709b78c4793ed36018708e1cdd3fdebaef34115982d644444ae0666"
+        },
+        "arm64": {
+            "url": "https://github.com/luolangaga/tubatools/releases/download/v1.2.2/TubaWinUi3_Portable_1.2.2_arm64.zip",
+            "hash": "1fc79205d1a628a693ab9be4e18586093b67d0a8c51d1b312e5edb2cdc1a666d"
+        }
+    },
+    "extract_dir": "src",
+    "shortcuts": [
+        [
+            "TubaWinUi3.exe",
+            "TubaTools"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/luolangaga/tubatools/releases/download/v$version/TubaWinUi3_Portable_$version_x64.zip"
+            },
+            "32bit": {
+                "url": "https://github.com/luolangaga/tubatools/releases/download/v$version/TubaWinUi3_Portable_$version_x86.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/luolangaga/tubatools/releases/download/v$version/TubaWinUi3_Portable_$version_arm64.exe"
+            }
+        }
+    }
+}
