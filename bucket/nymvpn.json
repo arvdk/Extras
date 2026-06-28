@@ -1,0 +1,39 @@
+{
+    "version": "2026.10.0",
+    "description": "A privacy platform that provides network-level privacy against mass surveillance — protecting not just what you communicate, but who you talk to, when, and how often.",
+    "homepage": "https://nym.com",
+    "license": "GPL-3.0-or-later",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/nymtech/nym-vpn-client/releases/download/nym-vpn-app-v2026.10.0/NymVPN_2026.10.0_x64-setup.exe#/dl.7z",
+            "hash": "bb67452a95431b11bf94f2e191c905f73c1335838fead0f74ba843fcc697fe55"
+        },
+        "arm64": {
+            "url": "https://github.com/nymtech/nym-vpn-client/releases/download/nym-vpn-app-v2026.10.0/NymVPN_2026.10.0_arm64-setup.exe#/dl.7z",
+            "hash": "d172e7fb2b0a6258f802db83a6885e9c26396172301396d4f137a46f224defbf"
+        }
+    },
+    "installer": {
+        "script": "Remove-Item \"$dir\\`$*\", \"$dir\\Uninstall*\" -Force -Recurse"
+    },
+    "shortcuts": [
+        [
+            "NymVPN.exe",
+            "NymVPN"
+        ]
+    ],
+    "checkver": {
+        "url": "https://github.com/nymtech/nym-vpn-client/releases",
+        "regex": "nym-vpn-app-v([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/nymtech/nym-vpn-client/releases/download/nym-vpn-app-v$version/NymVPN_$version_x64-setup.exe#/dl.7z"
+            },
+            "arm64": {
+                "url": "https://github.com/nymtech/nym-vpn-client/releases/download/nym-vpn-app-v$version/NymVPN_$version_arm64-setup.exe#/dl.7z"
+            }
+        }
+    }
+}
